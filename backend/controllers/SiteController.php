@@ -28,7 +28,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index', 'calendar'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -63,6 +63,16 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    /**
+     * Displays calendar.
+     *
+     * @return string
+     */
+    public function actionCalendar()
+    {
+        return $this->render('@common/views/site/calendar');
     }
 
     /**

@@ -29,7 +29,7 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
-                'only' => ['logout', 'signup'],
+                'only' => ['logout', 'signup', 'calendar'],
                 'rules' => [
                     [
                         'actions' => ['signup'],
@@ -37,7 +37,7 @@ class SiteController extends Controller
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout', 'calendar'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -76,6 +76,16 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    /**
+     * Displays calendar.
+     *
+     * @return string
+     */
+    public function actionCalendar()
+    {
+        return $this->render('@common/views/site/calendar');
     }
 
     /**

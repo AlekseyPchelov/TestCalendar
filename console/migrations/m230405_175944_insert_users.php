@@ -7,7 +7,6 @@ use yii\db\Migration;
  */
 class m230405_175944_insert_users extends Migration
 {
-
     public function up()
     {
         $this->insert('user', ['id' => 1, 'username' => 'test0', 'auth_key' => '5R-TUOKWkC51Z_Fv4LhR1bQZVHT9qFxR', 'password_hash' => '$2y$13$nwETMQ8OviBLWc6SFAMmWOFiah/kDl8cBCjPGetwrLBUwyvHUHK3O', 'password_reset_token' => Yii::$app->security->generateRandomString() . '_' . time(), 'email' => 'test0@test.ru', 'status' => '10', 'created_at' => '1680719317', 'updated_at' => '1680719317', 'verification_token' => 'OeyFuJoh9DNPM0H6Gs1BbaoUbIMpSSs5_1680719317']);
