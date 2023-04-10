@@ -64,26 +64,24 @@ CalendarAsset::register($this);
     <main role="main" class="flex-shrink-0">
         <div class="container">
             <div class="wrapper">
-                <div class="content-wrapper">
-                    <section class="content-header">
-                        <div class="container-fluid">
-                            <div class="row mb-2">
-                                <div class="col-sm-6">
-                                    <?= Breadcrumbs::widget([
-                                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                                    ]) ?>
-                                </div>
+                <section class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <?= Breadcrumbs::widget([
+                                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                                ]) ?>
                             </div>
                         </div>
-                    </section>
-                    <?= Alert::widget() ?>
-                    <?= $content ?>
-                </div>
+                    </div>
+                </section>
+                <?= Alert::widget() ?>
+                <?= $content ?>
             </div>
         </div>
     </main>
 
-    <footer class="footer mt-auto py-3 text-muted">
+    <footer class="footer mt-auto py-3 bg-dark">
         <div class="container">
             <p class="float-start">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
             <p class="float-end"><?= Yii::powered() ?></p>
@@ -92,7 +90,7 @@ CalendarAsset::register($this);
 
 
     <?php $this->endBody() ?>
-
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
     </body>
     </html>
 <?php $this->endPage();

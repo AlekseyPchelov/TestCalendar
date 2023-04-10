@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 d-none">
                 <div class="sticky-top mb-3">
                     <div class="card">
                         <div class="card-header">
@@ -58,7 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             </div>
 
-            <div class="col-md-9">
+            <div class="col-md-13">
                 <div class="card card-primary">
                     <div class="card-body p-0">
 

@@ -16,6 +16,9 @@ return [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
+        'assetManager' => [ // отключение кеширования статики
+            'forceCopy' => true,
+        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
@@ -48,3 +51,7 @@ return [
     ],
     'params' => $params,
 ];
+
+if(YII_ENV == YII_ENV_DEV){
+    unset($config['components']['cache']);
+}
