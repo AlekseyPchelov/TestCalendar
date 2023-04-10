@@ -85,6 +85,8 @@ class SiteController extends Controller
      */
     public function actionCalendar()
     {
+        $this->layout = '@common/views/layouts/adminLTE';
+
         return $this->render('@common/views/site/calendar');
     }
 

@@ -5,7 +5,7 @@ namespace common\assets;
 use yii\web\AssetBundle;
 
 /**
- * Main common application asset bundle.
+ * AdminLTE common application asset bundle.
  */
 class AdminLTEAsset extends AssetBundle
 {
@@ -17,8 +17,10 @@ class AdminLTEAsset extends AssetBundle
     ];
     public $js = [
         'plugins/jquery/jquery.min.js',
-        'dist/js/adminlte.min.js',
+        'plugins/bootstrap/js/bootstrap.bundle.min.js',
         'plugins/jquery-ui/jquery-ui.min.js',
+        'dist/js/adminlte.min.js',
+        'plugins/moment/moment.min.js',
         'plugins/fullcalendar/main.js'
     ];
     public $depends = [
